@@ -7,7 +7,7 @@ ARG ESPORTS_SITE_DIR="/srv/esports"
 
 # deploy Dockerfile - release image
 FROM node:10-alpine
-LABEL maintainer="vkom <admin@mh00p.net>"
+LABEL maintainer="vkom <admin@vkom.cc>"
 
 # env for cmd exec:
 ARG ESPORTS_SITE_DIR
