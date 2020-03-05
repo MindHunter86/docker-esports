@@ -5,14 +5,13 @@ FROM node:12-alpine AS builder
 LABEL maintainer="vkom <admin@vkom.cc>"
 
 WORKDIR /usr/src/esports
-ADD .
+ADD . /usr/src/esports
 
 # remove some default shit:
-RUN rm -vrf config/* \
+RUN rm -vrf config/*
 
 # install all project dependencies and build them:
 RUN apk add --no-cache build-base python \
-	&& npm install -g yarn \
 	&& yarn
 
 
